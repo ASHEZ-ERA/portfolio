@@ -1,16 +1,18 @@
-import React from 'react'
-import {Outlet} from 'react-router-dom'
-import Header from './pages/Header/Header'
-import Footer from './pages/Footer/Footer'
+import React from "react";
+import { Outlet } from "react-router-dom";
+import Header from "./pages/Header/Header";
+import Footer from "./pages/Footer/Footer";
 
 function Layout() {
   return (
-    <div>
-      <Header/>
-      <Outlet/>
-      <Footer/>
+    <div className="flex flex-col min-h-screen bg-black text-white">
+      <Header />
+      <main className="flex-grow">
+        <Outlet />
+      </main>
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default Layout
+export default Layout;
